@@ -78,4 +78,17 @@ print(result11)
 result12 = hello.replace("world","turkey")
 print(result12)
 
+# Ornek Uygulama -- STRING METODLARI :
+
+result = " hello world "
+result12 = "www.sadikturan.com"
+result_strip = result.strip()
+print(result)
+print(result_strip)
+result_split = result12.split(".")
+print(result_split)
+buyuk = result12.upper()
+print(buyuk)
+karakter = result.count("l")
+print(karakter)
 
