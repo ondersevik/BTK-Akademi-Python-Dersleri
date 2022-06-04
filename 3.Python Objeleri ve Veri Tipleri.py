@@ -91,4 +91,31 @@ buyuk = result12.upper()
 print(buyuk)
 karakter = result.count("l")
 print(karakter)
+result_baslangıc= result.startswith(" hello") # başlangıç bu mu?
+print(result_baslangıc)
+result_find = result.find("worl") # index numarası döndürür
+print (result_find)
+
+# LİSTELER UYGULAMALAR
+liste = ["BMW","Mercedes","Opel","Mazda"]
+print (liste)
+print (len(liste))
+print (liste[0],liste[-1]) # ilk ve son elemanlar
+liste[3] = "Toyota" # 4 ncü eleman Toyota yapıldı
+print(liste)
+print(liste[2])
+liste[-1] = "Renault"
+liste[-2] = "Totoya"
+print(liste)
+
+listedevarmı = "reno" in liste # -- in -- listede var mı?
+print(listedevarmı) # True[var]/False [yok]veriyor 
+
+print(liste [0:2]) # 0 dahil 2 hariç elemanları alır.
+liste [-2:] = ["Onder","Atakan"] # -2 ve sonrasındaki elemanları listedeki bu elemanlar ile değiştirdik.
+print(liste)
+del liste[-1]
+print(liste)
+
+
 
