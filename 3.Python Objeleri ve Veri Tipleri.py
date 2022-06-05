@@ -181,3 +181,46 @@ print(result103)
 print(result104)
 print(result105)
 print(result106)
+
+
+# PYTHON TUPLE (count ve index metodları var sadece)
+
+tuple = (1,2,3,4,5,6)
+print(type(tuple))
+result20 = tuple.count(2) # kaç tane 2 var
+result21 = tuple.index (4) # 4 hangi indexte
+print (result20, result21)
+
+result22 = tuple + tuple # sadece mevcutları değiştiremiyoruz
+print(result22)
+
+# DICTIONARY SÖZLÜK {key : value}
+
+sözlük = {41 : "kocaeli", 45 : "Manisa"}
+print(type(sözlük))
+# result31 = sözlük.copy(35,"izmir")
+result30 = sözlük.clear()
+
+print(result30)
+
+'''
+# UYGULAMALAR
+
+ogrenciler = {
+     "120" : {
+            "Adı"       : "Ali",
+            "Soyadı"    : " Erk ",
+            "Telefonu " : " 445556666"},
+     "121" : {
+            "Adı"       : "Veli",
+            "Soyadı"    : "Berk ",
+            "Telefonu " : " 7033747666"},
+     "122" : {
+            "Adı"       : "Selim",
+            "Soyadı"    : " Tekin ",
+            "Telefonu " : " 98743556666"}
+}
+
+
+'''
+
