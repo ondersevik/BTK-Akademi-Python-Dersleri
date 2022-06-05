@@ -117,5 +117,67 @@ print(liste)
 del liste[-1]
 print(liste)
 
+# LİSTE METODLAR :
+numbers = [1,2,3,4,5,6,7,8,9,0,6]
+letters = ["4","5","7","mun"]
 
+result101 = min(numbers)
+result102 = max(numbers)
+result103 = min(letters)
+result104 = max(letters)
 
+print(result101)
+print(result102)
+print(result103)
+print(result104)
+
+# SLICING INDEXLEME
+print(numbers[3:6])
+print(numbers[::-1])
+
+numbers[4] = 49
+print(numbers)
+
+print(numbers.append(45)) # sona atar
+print(numbers)
+print(numbers.insert(0,1000)) # index nuya deger atanır
+print(numbers)
+numbers.remove(1000) # karakter silinir..
+print(numbers)
+numbers.pop(2) # index nu silinir
+print(numbers)
+numbers.sort()
+print(numbers)
+print(numbers.reverse())
+numbers.count(0)
+print(numbers)
+
+# UYGULAMALAR
+names = ["Ali","Yagmur","Hakan","Deniz"]
+years = [1998,200,1998,1987]
+
+result10 = names.append("Cenk")
+print(result10)
+result11 = names.insert(0,"Sena")
+print(result11)
+names.index("Deniz")
+names.remove("Deniz")
+result1000 = "Ali" in names # True/False döker
+result1001 = names.index("Ali") # 0 ve -1 döker 
+print (result1000, result1001)
+print(names[::-1]) # names.reverse() ters yazdırmak
+
+names.sort()
+print(names)
+
+result102 = years.sort() # alfabetik sıralama
+result103 = ["Chevro","Dacia"]
+result104 = min(years) # en kucuk eleman verir
+result105 = max(years) # en buyuk eleman verir
+result106 = years.count(1987) # 1997 elemanı sayar
+
+print(result102)
+print(result103)
+print(result104)
+print(result105)
+print(result106)
