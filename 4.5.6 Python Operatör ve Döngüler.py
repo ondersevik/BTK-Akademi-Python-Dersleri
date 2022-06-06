@@ -1,9 +1,10 @@
 # Operatör ve Döngüler
 
-x , y , z = 5 ,10 ,15
-
-x += 5
+# ATAMA OPERATÖRLERİ : + , - , * , / ,  // kalansız bölüm , % mod , += , /= vb , **n üssü , [index işlemleri]
+#-------------------------------------------------------------------------------------------------------------
+x = 5
 y = x 
+z = 78
 
 print(x+y+z)
 
@@ -38,3 +39,22 @@ x,*y,z = numbers
 print (z**3)         # 6 ussu 3 = 216
 print (x,y,z)
 print (y[0]+y[1]+y[2])  
+
+# KARŞILAŞTIRMA OPERATÖRLERİ :  == eşitmi, != eşit değilmi, <= küçük eşit mi , < küçük mü .. True [1]/False[0] karşılaştırma, 
+#---------------------------------------------------------------------------------------------------
+
+a = int(input(" Bir sayı giriniz : "))
+b = int(input(" ikinci sayı giriniz : "))
+print (" a sayısı {a} b den {b} büyüktür : ", a > b) 
+a1 = (a % 2)   # tekmi çift mi?
+a2 = (a >= 0)  # pozitif negatif ?
+print (f" a sayısı çifttir : {a1 == 0} ")
+print (f" a sayısı pozitiftir : {a2 == 1} ")
+
+c = int(input(" 1 nci vize sınav notu giriniz : "))
+d = int(input(" 2 nci vize sınav notu giriniz : "))
+e = int(input(" final sınav notu giriniz : "))
+Not = 0.30 * ( c + d ) + 0.40 * e 
+if Not >= 50 : " Sınavı geçmiştir." 
+print (f'Sınavlardan aldığı ortalama not : {int(Not)} . Sınıfı geçmiştir : {Not>=50}')
+
