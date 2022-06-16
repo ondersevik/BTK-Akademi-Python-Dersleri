@@ -1,18 +1,21 @@
 # 3.Python Objeleri ve Veri Tipleri
 
-from regex import B, R
-from sqlalchemy import DATE
 
 
 musteri_Adi = "Onder"
 musteri_Soyadi = "Sevik"
 musteri_AdiSoyadi = musteri_Adi +" "+ musteri_Soyadi
+musteri_AdiSoyadi_ = musteri_Adi & musteri_Soyadi
 musteri_Cinsiyet = True # Erkek
 musteri_TCkimliknu = "12908728726" # bu tip veriler sstring olarak kaydedilir.
 musteri_Dogumyılı = 1975
 musteri_Yas = 2020 - musteri_Dogumyılı
+
+print(musteri_AdiSoyadi)
+print(musteri_AdiSoyadi_)
 print(musteri_Yas)
 
+'''
 adam11 = 150
 adam22 =223
 adam33 = 567
@@ -203,7 +206,6 @@ result30 = sözlük.clear()
 
 print(result30)
 
-'''
 # UYGULAMALAR
 
 ogrenciler = {

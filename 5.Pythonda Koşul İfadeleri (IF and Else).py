@@ -1,6 +1,6 @@
 # 5.Pythonda Koşul İfadeleri (IF and Else İLE Elif Clauses)
 
-
+'''
 # Kod Bloğu -----> Koşul ------> True ise A yada False ise B Else ise C
 
 if (kosul):
@@ -148,3 +148,4 @@ elif (x >=50  and c>=50) :
 else :
     print(f'Sınıfta kaldınız.')
     
+'''
