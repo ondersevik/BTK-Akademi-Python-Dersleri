@@ -149,4 +149,3 @@ else :
     print(f'Sınıfta kaldınız.')
     
 '''
-# Tamamlandığında bitirme işareti konulacak..
