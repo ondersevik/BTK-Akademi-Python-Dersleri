@@ -41,3 +41,7 @@ SQL Database: MySql & SQLite
 NoSQL Database: MongoDb
 Masaüstü Uygulama Geliştirme: PyQt5
 Web Geliştirme: Django
+
+
+<img width="2771" alt="py3 in one pic" src="https://user-images.githubusercontent.com/80422807/174289975-2011b6a5-91a9-4adf-b8e7-5326ca8eb706.png">
+
