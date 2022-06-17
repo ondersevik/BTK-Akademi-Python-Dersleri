@@ -69,13 +69,21 @@ for i in sehirler :
 '''
 # UYGULAMALAR (DICTIONARY)
 urunler = [
-    {" adı " : " onder ", "fiyat " : "3000"},
-    {" adı " : " ali ", "fiyat " : "5000"},
-    {" adı " : " veli ", "fiyat " : "4500"},
-    {" adı " : " hasan ", "fiyat " : "2000"},
+    {"adı" : " onder ", "fiyat" : "3000"},
+    {"adı" : " ali ", "fiyat" : "5000"},
+    {"adı" : " veli ", "fiyat" : "4500"},
+    {"adı" : " hasan ", "fiyat" : "2000"},
 ]
 print(len(urunler))
 print(urunler[1])
 
-for key,value in urunler.items() :
-    print(key.values)
+
+toplam = 0
+for key in urunler :                   # (key1 : value1)
+    value_fiyat = int(key["fiyat"])    # keyi fiyat olanların int cevrilmiş value alındı..
+    toplam += value_fiyat 
+    if (int(key["fiyat"])) <= 3000 :
+        print (key["adı"],"kişisi",key["fiyat"], "ile aldığı urun 3000 tl den düşük ve eşit ürünler listesinde olup ucuzdur.")
+    else :
+        print (key["adı"], "urunu pahalıdır.")
+print ("urunlerin toplam fiyatı = ", toplam )
