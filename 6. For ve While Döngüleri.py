@@ -66,7 +66,7 @@ for i in sehirler :
     else : 
         print (f'{i} şehir length uzunluğu 5 den fazladır.')
 
-'''
+
 # UYGULAMALAR (DICTIONARY)
 urunler = [
     {"adı" : " onder ", "fiyat" : "3000"},
@@ -87,3 +87,73 @@ for key in urunler :                   # (key1 : value1)
     else :
         print (key["adı"], "urunu pahalıdır.")
 print ("urunlerin toplam fiyatı = ", toplam )
+
+
+
+# While Döngüsü :
+
+x = 90
+
+while ( x< 100): # True koşul döndüğü sürece döngü var..Döngü başladı.
+   
+    if ( x % 2 ==0): # İçine if döngüsü yaptık:
+        print(" çift sayılar :", x)
+    else :
+        print(" tek sayılar :", x)
+   
+    x += 1        # Döngü devam ediyor.
+    print (x)    # İç döngü bitti.Devam while ile yeniden iç döngü başladı.
+print(" Bitti")  # Dış döngü bitt. GİRİNTİLER ÖNEMLİ BURADA..
+
+
+
+# While Uygulamalar :
+
+sayilar = [1,3,5,7,9,12,19,21]  # liste adında türkçe karakter kullanma 👧 sayılar yazdım 1 saat ugrastım..
+
+# liste elemanlarını yazdır.
+i = 0
+while i < (len(sayilar)) :
+    
+    print(sayilar[i])
+    i += 1
+
+print( "Bitti")
+
+# Başlangıç ve Bitiş değerlerini aldığın listenin değerleini yazdır.
+
+a = int(input("İlk değer giriniz:")) # Başlangıç sayısı aldık.
+b = int(input("Son değer giriniz:")) # Bitiş sayısı alduk.
+
+i = a                               # değişkene başlangıç sayısını atadık .
+while ( i < b ):                    # koşul[T/F] : i değişkenin b den küçük olması = True.
+    i += 1
+    if ( i % 2 == 0) :               # alt koşul mod 2 olmasında iç IF döngüsü olusturdu.
+        print(i, " sayısı çift sayıdır.")
+    else :
+        print(i, "sayısı tek sayıdır.")
+
+# 1-100 arasını azalan şekilde yazdır.
+
+i = 100                               # değişkene başlangıç sayısını atadık .
+while ( i > 0 ):                    # koşul[T/F] : i değişkenin b den küçük olması = True.
+    i -= 1
+    print(i)
+print("Bitti")
+    
+
+'''
+# Aldığımız değerleri liste içinde saklayalım.
+
+liste = []                          # Boş liste oluşturduk.
+
+i = 0                               # değişkene liste başlangıç indexini atadık .
+while ( i < 5 ):                    # koşul[T/F] : i değişkenin 5 input girmesi = True.
+    sayi = int(input("sayı giriniz :"))
+    liste.append(sayi)              # sayi girişi listeye atandı.
+    liste.sort()                    # sayılar sıralandı.
+    #liste.reverse()                 # sayılar ters çevrildi.
+    i += 1
+    print(liste)
+print("Bitti")
+    
