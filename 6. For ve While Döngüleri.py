@@ -142,8 +142,11 @@ while ( i > 0 ):                    # koşul[T/F] : i değişkenin b den küçü
 print("Bitti")
     
 
-'''
+
 # Aldığımız değerleri liste içinde saklayalım.
+
+from http.client import CONTINUE
+
 
 liste = []                          # Boş liste oluşturduk.
 
@@ -152,8 +155,70 @@ while ( i < 5 ):                    # koşul[T/F] : i değişkenin 5 input girme
     sayi = int(input("sayı giriniz :"))
     liste.append(sayi)              # sayi girişi listeye atandı.
     liste.sort()                    # sayılar sıralandı.
-    #liste.reverse()                 # sayılar ters çevrildi.
+    liste.reverse()                 # sayılar ters çevrildi.
+
+    # BREAK / CONTINUE KULLANIMI :
+    if ( i == 3) :
+        print(f' {i} nci döngüde break yaptık ve müteakip döngü durdu.')
+        break      # break döngüyü durdurur. While döngüsünden çıkarız. Yani if = False olur.
+       # continue  # continue o anda true iptal eder ve döngüde başa döner ve hep döngü olur. Bu yuzden i += 1 gecemeyiz
+       # n yapacağız .. i += 1 satırını if satırı üstüne alacağız.
     i += 1
     print(liste)
 print("Bitti")
+
     
+
+# FOR VE RANGE DÖNGÜLERİ KARŞILAŞTIRMA :
+
+liste = [1,2,3,4,5,6]
+
+for i in liste :
+    print (i)  # 1 2 3 4 5 6 
+
+# peki elimizde liste olmaz ise nasıl yapacağız ?
+
+for a in range(6): # 6 stop element i değişkenidir ve range hem for hemde while döngüde kullanılabilir.
+    print (a)  # 0,1,2,3,4,5 verir.. dikkat 0 dan başlıyor ve stop değişken yok.
+
+for b in range(2,50,4) : # başlangıç[dahil] + bitiş[hariç] ve step elemanları
+    print (b)
+
+print(list(range(2,50,2))) # yukarıdaki çıktıyı list objesi olarakta alabilirim. yada
+print(tuple(range(2,50,2))) # tuple objesi
+
+# enumerate : (eğer indexide almak istersek)
+
+x = 'ondersevik'       # x stringine odersevik atandı
+
+for index,i in enumerate(x):  # x stringi enumerate ile index nu ve string elemanlarına ayrıldı.
+    print(index,i)           # stringin index nu ve elemanı yazıldı 
+
+# zip : [ 2 listeyi dict gibi birleştrmek istersek]
+
+list1 = [1,2,3,4,5]
+list2 = ["a","b","c"]
+print(list(zip(list1,list2)))  # [(1, 'a'), (2, 'b'), (3, 'c')]
+
+for item in zip(list1,list2) :
+    print(item)                 # (1, 'a')
+                                # (2, 'b')
+                                # (3, 'c')
+
+
+for a , b in zip(list1,list2) :
+    print(a)                 # sadece indexleri döker.
+
+'''
+
+# LIST COMPREHENSIONS AYNI SONUÇ VEREN UYGULAMALAR :
+
+x =[]
+
+# direkt listeye alınmış range :
+print(list(range(2,20,2))) # [2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+# döngü ile alınan değişkenlerin listeye append edilmesi :
+for a in range(2,20,2) :   # [2, 4, 6, 8, 10, 12, 14, 16, 18]
+    x.append(a) 
+print(x)
