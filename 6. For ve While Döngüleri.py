@@ -1,4 +1,4 @@
-# 6. FOR ve WHILE DÖNGÜLERİ :
+# LOOPS [ DÖNGÜLER] : [ For , while , break , continue , range , enumerate , zip ]  
 '''
 # LİSTELERDE DÖNGÜLER :
 sayılar = [1,2,3,4,5]
@@ -157,7 +157,8 @@ while ( i < 5 ):                    # koşul[T/F] : i değişkenin 5 input girme
     liste.sort()                    # sayılar sıralandı.
     liste.reverse()                 # sayılar ters çevrildi.
 
-    # BREAK / CONTINUE KULLANIMI :
+# BREAK / CONTINUE KULLANIMI :
+
     if ( i == 3) :
         print(f' {i} nci döngüde break yaptık ve müteakip döngü durdu.')
         break      # break döngüyü durdurur. While döngüsünden çıkarız. Yani if = False olur.
@@ -167,7 +168,15 @@ while ( i < 5 ):                    # koşul[T/F] : i değişkenin 5 input girme
     print(liste)
 print("Bitti")
 
-    
+for n in range (2,10) :        # 2 ile 10 (hariç) 1 step range n değişken üret = 2,4,6,8
+    if n % 2 == 0 :            # mod 2 ye göre 0 olanlarda devam
+        print ("Found an even number : " , n)  # 2,4,6,8 
+        continue               # 1 atla devam taki
+    if n > 5 :                 # n 5 den yani 6 ve üstü olana kadar False verir ve yukarı döngü çalışır. 
+        print ("GT 5!")        # 2,4,6 bas ve GT 5 yaz ve altta break ile DUR.
+        break                   # Burada break ile if döngüsü DURUR.. False yapar bitrir.
+
+
 
 # FOR VE RANGE DÖNGÜLERİ KARŞILAŞTIRMA :
 
@@ -209,7 +218,7 @@ for item in zip(list1,list2) :
 for a , b in zip(list1,list2) :
     print(a)                 # sadece indexleri döker.
 
-'''
+
 
 # LIST COMPREHENSIONS AYNI SONUÇ VEREN UYGULAMALAR :
 
@@ -222,3 +231,48 @@ print(list(range(2,20,2))) # [2, 4, 6, 8, 10, 12, 14, 16, 18]
 for a in range(2,20,2) :   # [2, 4, 6, 8, 10, 12, 14, 16, 18]
     x.append(a) 
 print(x)
+'''
+
+# RANDOM MODÜLÜ UYGULAMALAR :
+
+
+
+# RASTGELE SAYI TAHMİN ETME OYUNU :
+ 
+import random  # random modulu import ettik
+
+
+# list = [1,2,3,4,5]
+# print(random.random()) # 0 ile 1.0 float döner
+# print(random.uniform(1,100)) # 1.0 ile 100.0 arasında float döner
+# print(random.randint(1,100)) # 0 ile 1.0 integer döner
+# print(random.shuffle(list)) # liste içinde değerleri karıştırır
+
+
+y = random.randint(1,20) # 0 ile 1.0 integer döner. Y DEĞERİ WHİLE DIŞINDA OLDUĞU İÇİN HER DEFASINDA DEĞİŞMEZ.
+
+h = 5 # hak sayısı 5 dir. Her deneme 20 puan düşer toplam puan 100
+while h > 0 :    # h>0 koşulu olduğu sürece True döner ve döngü çalışır.
+    h -= 1       # her defasında hakkımız 1 azalacak ..
+    puan = 100 - ((h+1) * 20)
+    x = int(input(" 0 -20 arası Bir sayı tahmin ediniz:"))   # Tahmin edilecek sayı istenecek While döngüde her defasında alınacak
+   
+
+# TAHMİN DOĞRUYSA :
+
+    if x == y :                                  # eğer true olursa döngü çalışır.
+        print(f" Tebrikler rastgele sayıyı -- {y}-- bildiniz. Puanınız {puan} dır. ")
+        break                                    # while döngüden çıkmak için lazım yoksa while döner durur.
+
+# TAHMİN AZ İSE:
+
+    elif x < y :                                  # eğer true olursa döngü çalışır.
+        print(" Rastgele sayıyıyı bilemediniz. Yukarı tahmin edin. ")
+       
+# TAHMİN FAZLA İSE :
+    else :                                       
+        print(" Rastgele sayıyıyı bilemediniz. Aşağı tahmin edin. ")
+       
+    if h == 0 :
+        print (f" Hakkınız bitmiştir. Tutulan sayı ={y} dir. ")
+
